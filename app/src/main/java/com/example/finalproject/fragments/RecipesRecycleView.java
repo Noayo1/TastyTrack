@@ -109,6 +109,9 @@ public class RecipesRecycleView extends Fragment {
         // Load favorites from Firebase and mark favorites
         loadFavoritesAndMark();
 
+        View backButton = view.findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> requireActivity().onBackPressed());
+
         return view;
     }
 

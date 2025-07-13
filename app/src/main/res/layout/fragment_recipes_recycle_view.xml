@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#F4EEE8"
     tools:context=".fragments.RecipesRecycleView">
@@ -32,6 +33,31 @@
             android:textColor="@color/text_color"
             android:textSize="25dp"
             android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/MyRecipes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TastyTrack Picks"
+            android:fontFamily="@font/myfont"
+            android:textColor="#ADA08D"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
 
     </LinearLayout>
 
@@ -65,5 +91,23 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         tools:listitem="@layout/card_row" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#816C4C"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="15sp"
+        app:cornerRadius="10dp"/>
+
 
 </LinearLayout>

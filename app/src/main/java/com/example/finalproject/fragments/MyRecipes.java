@@ -66,6 +66,10 @@ public class MyRecipes extends Fragment {
 
         loadRecipesFromFirebase();
 
+        View backButton = view.findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> requireActivity().onBackPressed());
+
+
         return view;
     }
 

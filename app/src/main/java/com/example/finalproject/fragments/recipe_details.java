@@ -116,5 +116,9 @@ public class recipe_details extends Fragment {
         } else {
             Toast.makeText(getContext(), "Error: No recipe found in Bundle", Toast.LENGTH_LONG).show();
         }
+
+        View backButton = view.findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> requireActivity().onBackPressed());
+
     }
 }

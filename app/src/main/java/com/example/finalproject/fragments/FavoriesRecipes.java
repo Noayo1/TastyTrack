@@ -93,6 +93,10 @@ public class FavoriesRecipes extends Fragment {
 
         loadFavoritesFromFirebase();
 
+        View backButton = view.findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> requireActivity().onBackPressed());
+
+
         return view;
     }
 
