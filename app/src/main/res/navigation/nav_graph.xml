@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login_Page">
+
+    <fragment
+        android:id="@+id/login_Page"
+        android:name="com.example.finalproject.fragments.login_Page"
+        android:label="Login Page"
+        tools:layout="@layout/fragment_login__page">
+
+        <action
+            android:id="@+id/action_login_Page_to_register_Page"
+            app:destination="@id/register_Page" />
+        <action
+            android:id="@+id/action_login_Page_to_OptionsFragment"
+            app:destination="@id/OptionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/register_Page"
+        android:name="com.example.finalproject.fragments.register_Page"
+        android:label="Register Page"
+        tools:layout="@layout/fragment_register_page">
+
+        <action
+            android:id="@+id/action_register_Page_to_login_Page"
+            app:destination="@id/login_Page" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OptionsFragment"
+        android:name="com.example.finalproject.fragments.OptionsFragment"
+        android:label="fragment_options"
+        tools:layout="@layout/fragment_options" >
+        <action
+            android:id="@+id/action_OptionsFragment_to_favoriesRecipes"
+            app:destination="@id/favoriesRecipes" />
+        <action
+            android:id="@+id/action_OptionsFragment_to_recipesRecycleView"
+            app:destination="@id/recipesRecycleView" />
+        <action
+            android:id="@+id/action_OptionsFragment_to_MyRecipes"
+            app:destination="@id/MyRecipes" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriesRecipes"
+        android:name="com.example.finalproject.fragments.FavoriesRecipes"
+        android:label="fragment_favories_recipes"
+        tools:layout="@layout/fragment_favories_recipes" >
+        <action
+            android:id="@+id/action_favoriesRecipes_to_recipe_details"
+            app:destination="@id/recipe_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipesRecycleView"
+        android:name="com.example.finalproject.fragments.RecipesRecycleView"
+        android:label="fragment_recipes_recycle_view"
+        tools:layout="@layout/fragment_recipes_recycle_view">
+
+        <!-- ✅ הוספה חשובה: הפעולה מה-Recycler למסך הפרטים -->
+        <action
+            android:id="@+id/action_recipesRecycleView_to_recipe_details"
+            app:destination="@id/recipe_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MyRecipes"
+        android:name="com.example.finalproject.fragments.MyRecipes"
+        android:label="fragment_MyRecipes"
+        tools:layout="@layout/fragment_my_recipes" >
+        <action
+            android:id="@+id/action_MyRecipes_to_uploadRecipe"
+            app:destination="@id/uploadRecipe" />
+        <action
+            android:id="@+id/action_recipesRecycleView_to_recipe_details"
+            app:destination="@id/recipe_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/uploadRecipe"
+        android:name="com.example.finalproject.fragments.UploadRecipe"
+        android:label="UploadRecipe"
+        tools:layout="@layout/fragment_upload_recipe" />
+
+    <fragment
+        android:id="@+id/recipe_details"
+        android:name="com.example.finalproject.fragments.recipe_details"
+        android:label="recipe_details"
+        tools:layout="@layout/fragment_recipe_details" />
+
+</navigation>
