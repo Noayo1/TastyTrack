@@ -59,7 +59,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
             notifyItemChanged(position);
         });
 
-        // ניווט לדף פרטים
         holder.itemView.setOnClickListener(v -> {
             Bundle bundle = new Bundle();
             bundle.putSerializable("recipe", recipe);
@@ -67,7 +66,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
             navController.navigate(navActionId, bundle);
         });
 
-        // הצגת תגיות כאייקונים
         holder.tagsContainer.removeAllViews();
         List<String> tags = recipe.getTags();
         if (tags != null && !tags.isEmpty()) {
@@ -111,7 +109,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         }
     }
 
-    // מזהה אייקון לפי תגית
     private int getIconForTag(String tag) {
         switch (tag.toLowerCase()) {
             case "gluten-free":
